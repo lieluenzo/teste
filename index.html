@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um aplicativo simples para organizar suas tarefas.">
+  <title>Minha lista de tarefas</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script src="src/js/app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <p class="eyebrow">Meu espaço de organização</p>
+      <h1>Lista de tarefas</h1>
+      <p class="subtitle">Uma coisa de cada vez. Você consegue!</p>
+    </header>
+
+    <form class="task-form" id="task-form">
+      <label class="sr-only" for="task-input">Digite uma tarefa</label>
+      <input
+        id="task-input"
+        name="task"
+        type="text"
+        placeholder="Ex.: estudar Git por 20 minutos"
+        maxlength="100"
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <section class="task-section" aria-labelledby="task-heading">
+      <div class="section-heading">
+        <h2 id="task-heading">Suas tarefas</h2>
+        <span id="task-count" class="task-count">0 tarefas</span>
+      </div>
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      <p id="empty-state" class="empty-state">Nenhuma tarefa por aqui. Adicione a primeira!</p>
+    </section>
+
+    <footer class="app__footer">
+      <span>Feito para praticar Git e GitHub.</span>
+    </footer>
+  </main>
+</body>
+</html>
